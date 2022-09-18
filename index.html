@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+
+<html class="no-js css-menubar" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+
+    <meta name="description" content="">
+
+    <meta name="author" content="">
+
+    <title>  fill the form ::  </title>
+
+    <link rel="apple-touch-icon" href="">
+
+
+
+    <!-- Stylesheets -->
+
+    <link rel="stylesheet" href="https://orison.school/global/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://orison.school/global/css/bootstrap-extend.min.css">
+
+    <link rel="stylesheet" href="https://orison.school/assets/css/site.min.css">
+
+    <link rel="stylesheet" href="https://orison.school/assets/css/new.css">
+
+    <!-- Plugins -->
+
+    <link rel="stylesheet" href="https://orison.school/assets/examples/css/pages/login-v3.css">
+
+    <!-- Fonts -->
+
+    <link rel="stylesheet" href="https://orison.school/global/fonts/material-design/material-design.min.css">
+
+    <link rel="stylesheet" href="https://orison.school/global/fonts/brand-icons/brand-icons.min.css">
+
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+
+    <script src="https://orison.school/global/vendor/breakpoints/breakpoints.js"></script>
+
+    <script>
+
+        Breakpoints();
+
+    </script>
+
+</head>
+
+<body class="animsition page-login-v3 layout-full">
+
+<div class="page vertical-align text-xs-center" data-animsition-in="fade-in" data-animsition-out="fade-out">>
+
+    <div class="page-content vertical-align-middle">
+
+        <div class="panel">
+
+            <div class="panel-body">
+
+                <div class="brand">
+
+                    <img class="" src="assets/images/logo.png" alt="...">
+
+                </div>
+
+                       <h3 class="register-heading">Fill the form</h3>
+                                <form method="post" autocomplete="off" name="google-sheet">
+                                	 <div class="form-group  form-material">
+                                            <input type="text" name="First Name" class="form-control" placeholder="   your First Name *" value="" required=""/>
+                                        </div>
+                                        <div class="form-group  form-material">
+                                            <input type="text" name="Father Name" class="form-control" placeholder="Your Father Name *" value="" required=""/>
+                                        </div>
+                                        <div class="form-group  form-material">
+                                            <input type="number" name="Phone" class="form-control" placeholder="Your Contact Number *" value="" required=""/>
+                                        </div>
+                                        <div class="form-group  form-material">
+                                            <input type="text" name="admission in class" class="form-control" placeholder="Your admission in class *" value="" required=""/>
+                                        </div>
+                                       
+                                        <div class="form-group  form-material">
+                                            <input type="submit" name="submit" class="btn btn-danger p-8 btn-animate btn-animate-vertical btn-block btn-md btn-squared m-t-20 waves-ligh" value="submit" />
+                                        </div>
+                                    </form>
+                    
+              
+          <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyVKu8nnzujRGsp_nNT4nEhtrmx_lTKCSV-F4eXJFz__fV57g/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for submiting..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</body>
+
+</html>
